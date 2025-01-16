@@ -1,0 +1,45 @@
+How to run the script on startup in Linux 
+1. Using a Startup Folder
+
+Create a Startup File: Create a file (e.g., daily_quote_startup.desktop) in your home directory's .config/autostart folder.
+Edit the File:
+
+[Desktop Entry]
+Name=Daily Quote
+Exec=/path/to/your/script/daily_quote.sh 
+Terminal=false 
+Type=Application
+Hidden=false 
+Replace /path/to/your/script/daily_quote.sh with the actual path to your script.
+
+
+2. Using a System Startup Script
+
+Linux:
+Create a Systemd Service File: Create a service file (e.g., daily_quote.service) in the /etc/systemd/system/ directory.
+Edit the File:
+Ini, TOML
+
+[Unit]
+Description=Daily Quote Script
+After=network.target
+
+[Service]
+User=your_user_name 
+ExecStart=/path/to/your/script/daily_quote.sh 
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
+Important Notes: 
+
+* Replace your_user_name with your actual username.
+* Enable and Start the Service:
+* sudo systemctl enable daily_quote.service
+* sudo systemctl start daily_quote.service
+
+* Permissions: Ensure your script has the necessary execution permissions. You can usually do this by running chmod +x custom_Greeting.sh in the terminal.
+* Testing: After implementing any of these methods, restart your computer to test if the script runs correctly at startup.
+* Troubleshooting: If the script doesn't run, check the system logs for any error messages.
+* Remember to choose the method that best suits your operating system and your preferences.

@@ -24,3 +24,5 @@ Believe in yourself!
 Stay positive!
 Embrace the chaos!
 Life is good.
+
+Please read over the instructions page for considerations and information on installation. 
