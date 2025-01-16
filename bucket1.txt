@@ -1,0 +1,16 @@
+-------------------------------
+Custom Greeting, old code 
+-------------------------------
+
+bash
+Copy code
+#!/bin/bash
+
+# Custom Greeting
+quotes=("Keep going!" "You can do it!" "Believe in yourself!" "Stay positive!")
+random_quote=${quotes[$RANDOM % ${#quotes[@]}]}
+
+echo "Hello, $(whoami)! Today is $(date '+%A, %B %d, %Y')."
+echo "Motivational Quote: $random_quote"
+
+# revamped the code to make it accept mode quotes
