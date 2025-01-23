@@ -1,4 +1,4 @@
-# bash-cpde-project8-custom_Greeting
+# bash-code-project8-custom_Greeting
 Making a custom greeting bash script 
 
 custom_Greeting.sh
